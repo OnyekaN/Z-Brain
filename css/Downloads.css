@@ -1,0 +1,57 @@
+html {
+	height:100%;
+}
+
+body {
+	position: relative ;
+       	padding-bottom:10% ;
+	background-color: rgb(255,252,250) !important;
+}
+
+#container {
+
+}
+
+#header {
+	position: relative ;
+        height: 90px ;	
+	color: black ; 
+}
+
+#title {
+	position: relative ; 
+	white-space: nowrap ;	
+	font-size: 40px ;
+	font-family: Arial ;
+	color: black ;
+	top: 30px ;
+	left: 75px ; 
+}
+
+#content {
+	font-family: helvetica ;
+	color: gray ;
+}
+
+#downloads {
+	list-style-type:circle ;
+	margin-left: 80px ; 
+}
+
+#downloads a {
+	color: rgb(120,150,210) ;
+}
+
+#downloads a:hover {
+	color: rgb(240,100,80) ;
+}
+
+#downloads dt {
+	font-size: 18px ;
+	padding-top: 40px ; 
+}
+
+#downloads dd {
+	font-size: 10px ;
+	
+}

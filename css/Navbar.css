@@ -1,0 +1,39 @@
+/* Navbar.css */
+
+nav#nav {
+	margin-left:55px;
+}
+.navbar-nav > li > a, .navbar-brand {
+	padding: 5px 15px 5px 15px !important ;
+	height: 35px ;
+	font-size: 12px ;
+}
+
+.navbar-header {
+	margin-left: 0px !important ;
+	padding-top:0px !important ;
+	padding-bottom: 5px !important ;
+	height: 28px ;
+}
+
+.navbar {
+	margin-bottom: 0px !important ;
+	font-family: arial ;
+	min-height: 28px !important ;
+}
+
+.navbar-default {
+	border-bottom: 1px solid rgba(255,255,255,0.5) !important ;
+	margin-left: 0px ;
+	background-color: rgb(255,252,250) !important ;
+}
+
+
+.navbar-default .navbar-nav > .active > a {
+	background-color: rgb(250,239,236) !important
+}
+
+.navbar-static-top {
+	top: 0px ;
+}
+

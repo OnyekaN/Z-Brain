@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8" http-equiv="refresh" content="0;url=index.html"/>
+  <head>
+    <title>Z-Brain Atlas</title>
+    <link rel="stylesheet" type="text/css" href="css/Stylel2Proto.css">
+    <link rel="stylesheet" type="text/css" href="css/Sliders.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script type="text/javascript" src="js/d3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/gqeHelperFunctions.js"></script> 
+    <style>
+    </style>
+  </head>
+  <body>
+    <div id="container">  
+      <div id="header">
+        <div id="title">
+	  <span>Z-Brain Atlas</span>
+	</div>
+	<div id="info_bar">
+	  <!--span><strong>Currently viewing: </strong--><span id="current"></span></span>
+	</div>
+	<div id="menu">  <!-- menu -->
+	  <nav id="primary_nav_wrap">
+	    <ul>
+	    	<li><a href="#"style="color:white">Z-Brain</a>
+		</li>	
+	    </ul>
+	  </nav>
+	</div>
+      </div>
+      <div id="side_bar"> 
+        <div class="btn-group" id="main_button">
+	  <button type="button" data-toggle="dropdown" class="btn
+	  btn-default dropdown-toggle">Select Dataset<span class="caret">
+	  </span></button>
+	    <ul class="dropdown-menu"> 
+	    </ul>
+	</div>
+        <div class="btn-group" id="cyan_button">
+	  <button type="button" data-toggle="dropdown" class="btn
+	  btn-default dropdown-toggle">Select Overlay<span class="caret">
+	  </span></button>
+	    <ul class="dropdown-menu">
+	      <li><a href="#">None</a></li>  
+	    </ul>
+	  </div>  
+ 	<div class="opacity-slider" id="cyan-slider"> 
+	  <input type="range" class="cyan" id="cyan-range" step="1" 
+	  	 value="50" min="0" max="99" class="opacity">
+	</div>
+        <div class="btn-group" id="blue_button">
+	  <button type="button" data-toggle="dropdown" class="btn
+	  btn-default dropdown-toggle">Select Overlay<span class="caret">
+	  </span></button>
+	    <ul class="dropdown-menu">
+	      <li><a href="#">None</a></li>  
+	    </ul>
+	</div> 
+ 	<div class="opacity-slider" id="blue-slider"> 
+	  <input type="range" class="blue" id="blue-range" step="1"
+	 	 value="50" min="0" max="99" class="opacity">
+	</div>
+        <div class="btn-group" id="green_button">
+	  <button type="button" data-toggle="dropdown" class="btn
+	  btn-default dropdown-toggle">Select Overlay<span class="caret">
+	  </span></button>
+	    <ul class="dropdown-menu">
+	       <li><a href="#">None</a></li>  
+	    </ul>
+	</div>
+ 	<div class="opacity-slider" id="green-slider"> 
+	  <input type="range" class="green" id="green-range" step="1" 
+	  	value="50" min="0" max="99" class="opacity">
+	</div>
+        <div class="btn-group" id="yellow_button">
+	  <button type="button" data-toggle="dropdown" class="btn
+	  btn-default dropdown-toggle">Select Overlay<span class="caret">
+	  </span></button>
+	    <ul class="dropdown-menu">
+	      <li><a href="#">None</a></li>
+	    </ul>
+	</div>
+ 	<div class="opacity-slider" id="yellow-slider"> 
+	  <input type="range" class="yellow" id="yellow-range" step="1"
+	 	 value="50" min="0" max="99" class="opacity">
+	</div>
+      </div>
+      <div id="viewer_window">
+        <div id="fixed_left_adjust"></div> 
+	<div id="slider">
+	  <input type="range" id="range" name="img_slice" step="1" value="50"
+	  min="0" max="79" class="main-slider">
+	</div>
+        <div id="viewer">   
+	  <img id="centerpiece_img" alt="." align="center"/>
+          <img id="cyan_overlay" name="cyan" class="overlay" alt="."
+	  align="center" src="//:0"/> 
+	  <img id="blue_overlay" name="blue" class="overlay" alt="."
+	  align="center" src="//:0"/> 
+	  <img id="green_overlay" name="green" class="overlay" alt="."
+	  align="center" src="//:0"/> 
+	  <img id="yellow_overlay" name="yellow" class="overlay"
+	  alt="." align="center" src="//:0"/> 
+	 
+	  <script>
+	 
+	  	populateMenu($("#main_button .dropdown-menu"), datasets) ;
+		populateMenu($("#cyan_button .dropdown-menu"), masks) ;
+		populateMenu($("#blue_button .dropdown-menu"), masks) ;	
+		populateMenu($("#green_button .dropdown-menu"), masks) ;
+		populateMenu($("#yellow_button .dropdown-menu"), masks) ;	
+
+		$(".dropdown-menu li a").click(function() {
+			var selText = $(this).text();
+			$(this).parents('.form-group')
+				.find('button[data-toggle="dropdown"]')
+				.html(selText+' <span class="caret"></span>') ;
+		});
+	
+	  	var _img = document.getElementById("centerpiece_img") ;
+		var newImg = new Image ;
+		newImg.onload = function() { _img.src = this.src ; }
+		newImg.src="Images/Elavl3-H2BRFP_6dpf_MeanImageOf10Fish-50.jpg" ;
+		
+		var activeDatasets = { center:"None", cyan:"None", blue:"None", 
+			green:"None", yellow:"None"} ;
+		
+		var activeMasks = { cyan:"None", blue:"None",
+			green:"None", yellow:"None"} ;
+		
+		d3.selectAll(".btn-group button")
+			.classed("maskButton", true);
+	
+		var imgName = "default" ;
+		var sliceNo = 50 ;
+		var datasetName ="Elavl3-H2BRFP_6dpf_MeanImageOf10Fish" ;
+		document.getElementById("current")
+		    .innerHTML = "<strong>Currently Viewing </strong>--- "+datasetName ;
+
+		$("#main_button li").click(function() {
+		    	datasetName = $(this).text() ;
+			activeDatasets.center = datasetName ;
+		    	var imgSrc = "Images/"+datasetName+"-"+sliceNo+".jpg" ; 
+		    	$("#centerpiece_img").attr("src", imgSrc) ;	
+		document.getElementById("current")
+		    .innerHTML = "<strong>Currently Viewing </strong>--- "+datasetName ;
+		});
+	
+
+		$("#cyan_button li").click(function() {	
+			activeMasks.cyan = $(this).text() ;	
+			if ( activeMasks.cyan == "None" ) {
+			    $("#cyan_overlay").attr("src", "//:0") ;
+			    $("#cyan_button button")
+			    	.html("Select Overlay<span class='caret'></span>") ;
+			    return ;
+			}
+			$("#cyan_button button")
+			     .html(buttonLabel("cyan").abbrev)
+			     .attr("title", buttonLabel("cyan").full) ;
+			var cyanSrc = "Masks/cyan/"
+				+activeMasks.cyan+"-"+sliceNo+".png" ;
+		        $("#cyan_overlay").attr("src", cyanSrc) ;	
+		});
+
+		$("#blue_button li").click(function() {	
+			activeMasks.blue = $(this).text() ;
+			if ( activeMasks.blue == "None" ) {
+			    $("#blue_overlay").attr("src", "//:0") ;
+			    $("#blue_button button")
+			    	.html("Select Overlay<span class='caret'></span>") ;
+			    return ;
+			}
+			$("#blue_button button")
+			     .html(buttonLabel("blue").abbrev)
+			     .attr("title", buttonLabel("blue").full) ;
+			var blueSrc = "Masks/blue/"
+				+activeMasks.blue+"-"+sliceNo+".png" ;
+		        $("#blue_overlay").attr("src", blueSrc) ;	
+		});
+
+		$("#green_button li").click(function() {	
+			activeMasks.green = $(this).text() ;
+			if ( activeMasks.green == "None" ) {
+			    $("#green_overlay").attr("src", "//:0") ;
+			    $("#green_button button")
+			    	.html("Select Overlay<span class='caret'></span>") ;
+			    return ;
+			}
+			$("#green_button button")
+			     .html(buttonLabel("green").abbrev)
+			     .attr("title", buttonLabel("green").full) ;
+			var greenSrc = "Masks/green/"
+				+activeMasks.green+"-"+sliceNo+".png" ;
+		        $("#green_overlay").attr("src", greenSrc) ;	
+		});
+		$("#yellow_button li").click(function() {	
+			activeMasks.yellow = $(this).text() ;
+			if ( activeMasks.yellow == "None" ) {
+			    $("#yellow_overlay").attr("src", "//:0") ;
+			    $("#yellow_button button")
+			    	.html("Select Overlay<span class='caret'></span>") ;
+			    return ;
+			 }
+			$("#yellow_button button")
+			     .html(buttonLabel("yellow").abbrev)
+			     .attr("title", buttonLabel("green").full) ;
+			var yellowSrc = "Masks/yellow/"
+				+activeMasks.yellow+"-"+sliceNo+".png" ;
+		        $("#yellow_overlay").attr("src", yellowSrc) ;	
+		});
+		$("#range").mousemove(function() {
+			sliceNo = this.value ;
+			var imgSrc = "Images/"+datasetName+"-"+sliceNo+".jpg" ;
+			$("#centerpiece_img").attr("src", imgSrc) ;	
+			$("#current").text(datasetName) ;
+			$(".overlay").each(function() {	
+			    if ( activeMasks[this.name] != "None" ) { 
+			   	this.src = "Masks/"+this.name+"/"
+				+activeMasks[this.name]+"-"+sliceNo+".png" ;	
+			    }
+			});
+		}); 
+	
+		$("#cyan-range").mousemove(function() {
+			var that = this ;		
+			$("#cyan_overlay").css("opacity", function() {
+				return that.value/100 ;
+			})		
+		});
+		$("#blue-range").mousemove(function() {
+			var that = this ;		
+			$("#blue_overlay").css("opacity", function() {
+				return that.value/100 ;
+			})		
+		});
+		$("#green-range").mousemove(function() {
+			var that = this ;		
+			$("#green_overlay").css("opacity", function() {
+				return that.value/100 ;
+			})		
+		});
+		$("#yellow-range").mousemove(function() {
+			var that = this ;		
+			$("#yellow_overlay").css("opacity", function() {
+				return that.value/100 ;
+			})		
+		});
+
+	  </script>
+	</div>
+      </div>
+      <div id="extras">
+	  <span id="downloads">Downloads</span>
+	  <span>
+	    <a href="Downloads/AnatomyLabelDatabase.hdf5" download>Anatomy Database</a>
+	    <a href="Downloads/ZBrainViewer.m" download>ZBrainViewer.m</a>
+	    <a href="Downloads/MaskDatabase.mat" download>Mask Database</a>
+	    <a href="Downloads/_MAP-MapAnalysisScripts_NatMethodsSubmission.zip"
+	       download>Analysis Scripts</a>
+	    <a href="Downloads/_Map-Maps_NatMethodsSubmission.zip"
+	       download>MAP-Maps</a>
+	    <a href="Ref20131120pt14pl2.nrrd"
+	       download>Reference Brain</a>
+	  </span>
+      </div>		    
+      </div>
+    </div>		    
+  </body>
+</html>

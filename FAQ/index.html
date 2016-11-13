@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="description" content="Z-Brain Atlas: FAQ, frequently asked
+questions">
+  <meta charset="utf-8"> 
+    <title>FAQ: Z-Brain</title>
+    <link rel="stylesheet" type="text/css" href="css/FAQ.css"> 
+    <link rel="stylesheet" type="text/css" href="css/Navbar.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script type="text/javascript" src="libs/d3.min.js"></script>
+    <script type="text/javascript" src="libs/jquery-2.1.1.min.js"></script> 
+    <script type="text/javascript" src="js/gqeHelperFunctions.js"></script> 
+    <style>
+    </style>
+  </head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TQMQC8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQMQC8');</script>
+<!-- End Google Tag Manager -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63854656-1', 'auto');
+  ga('send', 'pageview');
+</script> 
+  <nav id="nav" class="navbar navbar-default navbar-static-top">
+	  <div class="navbar-header">
+	    <a class="navbar-brand" href="index.html">Z-Brain</a>
+	  </div>
+	  <div>
+	    <ul class="nav navbar-nav">
+	      <li><a href="index.html">Home</a></li>
+	      <li><a href="about.html">About</a></li>
+	      <li><a href="contributing.html">Contributing to the Z-Brain</a></li>
+	      <li class="active"><a href="FAQ.html">FAQ</a></li>
+	      <li><a href="downloads.html">Downloads</a></li>
+	    </ul>
+	  </div>
+	</nav>
+	<div id="container">
+      <div id="header">
+        <span id="title">Frequently Asked Questions</span>
+      </div>
+      <div id="content">
+        <h1>The fish I want to register are not 6 dpf, can I still
+	register them to the Z-Brain?</h1>
+	<p>If the fish are not of the correct stage (6dpf), you
+	certainly can still run the registration and attempt to align
+	them to the atlas. But, since the fish brain is rapidly
+	growing and maturing at these stages, there will be substantial
+	differences in anatomy between stages. So we would recommend
+	that you stick with the 6dpf stage, and we will not include
+	any non-6dpf data in the Z-Brain database.</p>
+        <br><br>	
+        <h1>My fish are not in the Nacre background, can I use PTU
+	instead to prevent pigment formation?</h1>
+	<p>You can do this, but PTU causes artifacts like delayed
+	development and altered behaviour. So we would only like to
+	use this as a last resort. An alternative is to bleach
+	pigmented fish. Using 3%H2O2, 1%KOH in water for 20-30min
+	after the PFA fixation step can efficiently clear the melanin
+	pigment. But, this bleaching can also destroy antigens and
+	worsen staining (see for example <a
+	href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0040132"
+	target="_blank">Li et al., 2012, Plos One</a>).
+	The ERK signal survives bleaching well, and so we would
+	recommend bleaching over PTU, if your other stains are
+	compatible.</p>
+	<br><br>
+        <h1>We like to take our stacks of fish live, rather than
+	fixing and staining with ERK. Can we use a live-marker for
+	registration?</h1>
+	<p>Yes, in theory you can use any of the labels already
+	contained in the Z-Brain as your registration channel. This
+	includes multiple transgenes that can be imaged live. Or, if
+	have a workhorse counter stain/line that you like to use, you
+	can first incorporate this into the atlas by fixing some fish
+	of this line, stain for ERK, and then register this stain into
+	the atlas using ERK. You can use this newly registered line
+	for your subsequent live-imaging registrations. Keeping in
+	mind that registering to the Z-Brain via this indirect path
+	(ie not registering directly to the original ERK brain), will
+	not be as optimal as direct 1-step registration using the
+	original stain.</p>
+	<br><br>
+	<h1>What is the catalog number for the ERK antibody?</h1>
+	<p>anti-ERK (p44/42 MAPK (Erk1/2) (L34F12) Mouse mAb #4696,
+	<a href="http://www.cellsignal.com/products/primary-antibodies/4696"
+	target="_blank">http://www.cellsignal.com/products/primary-antibodies/4696</a>)</p>
+	<br><br>
+	<h1>The Z-Brain Viewer isn’t working. What might be wrong?</h1>
+	<p>Make sure you have the AnatomyLabelDatabase.hdf5, and
+	MaskDatabase.mat file, that you are running a recent version
+	of Matlab (post R2014a), and have the image processing
+	toolbox. If this still isn’t working, please email me and send
+	me any error messages you see.</p>
+	<br><br>
+	<h1>What is the image resolution of the Z-Brain?</h1>
+	<p>The image resolution is the same as the reference brain. It
+	is x/y/z = 0.798/0.798/2 um.</p>
+      </div>
+    </div>
+
+  </body>
+</html>

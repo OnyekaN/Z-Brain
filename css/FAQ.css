@@ -1,0 +1,81 @@
+/* FAQ.css */
+
+html {
+	display: block ;
+	width: 1100px ;	
+}
+
+body {
+	position: relative ;
+        padding-bottom: 40px ; 
+	background-color: rgb(255,253,250) !important ; 
+	margin-left:5% ;	
+}
+
+body a {
+	color: rgb(46, 120, 230) ;
+}
+
+body a:hover {
+        color: rgb(0, 20, 251) ;
+}
+
+#container {
+	margin-left: 5% ;
+}
+
+#header {
+	position: relative ;
+        height: 120px ;	 
+}
+
+#title {
+	top: 30px ;
+	left: 1% ; 
+	position: relative ; 
+	white-space: nowrap ;	
+	font-size: 40px ;
+	font-family: arial;
+	color: black ;
+}
+
+#content {
+	margin-left:5px;
+	font-family: helvetica ;
+	color: black ; 
+}
+
+#content h1 {
+	font-size: 18px ;
+        font-style: italic ;	
+	color: gray ;
+	font-family: arial ;
+	margin: 0px 0px 0px 0px ;
+        padding: 0px 0px 10px 10px ;
+}
+
+#content h2 {
+	font-size: 15px ;
+        font-weight:bold ;	
+	font-family: arial ;
+	margin: 0px 0px 0px 0px ;
+        padding: 0px 0px 10px 10px ;
+}
+
+#content p {
+	padding-left: 10px ;
+	font-family: helvetica ;
+}
+
+#content li {
+	list-style: circle ;
+	padding-bottom: 0.2em ;
+	font-size: 12px ;
+}
+
+#content dd {
+	font-size: 10px ; 
+}
+
+
+

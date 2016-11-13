@@ -1,0 +1,70 @@
+html {
+	display:block ;
+	width: 1100px ;
+}
+
+body {
+	position: relative ;
+	padding-bottom: 40px ;
+	background-color: rgb(255,252,250) !important ;
+}
+
+body a {
+	color: rgb(46, 120, 230) ;
+}
+
+body a:hover {
+	color: rgb(0, 170, 225) ;
+}
+
+#container {
+	margin-left:5%;
+
+}
+
+#header {
+	position: relative ;
+        height: 120px ;	
+}
+
+#title {
+	top: 30px ;
+	left: 1% ; 
+	position: relative ; 
+	white-space: nowrap ;	
+	font-size: 40px ;
+	font-family: arial ;
+	color: black ;
+}
+
+#content {
+	margin-left:5px;
+	font-family: lucida ;
+	color: black ;
+}
+
+#content h1 {
+	font-size: 25px ;
+	color: gray ;
+	font-family: arial ;
+	margin: 0px 0px 0px 0px ;
+        padding: 0px 0px 10px 10px ;
+}
+
+#content p {
+	font-family: helvetica ;
+	padding-left: 10px ;
+}
+
+#content li {
+	padding-top: 10px ;
+	font-size: 15px ;
+}
+
+#content dd {
+	color: rgb(120, 120, 120) ;
+	font-size: 11px ; 
+}
+
+
+

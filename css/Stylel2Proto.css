@@ -1,0 +1,258 @@
+
+html {
+	height:100% ;
+	background-color: rgb(255,252,250) !important ;
+}
+
+body {
+	height:100% ;
+	width:100% ; 
+}
+
+#container {
+	margin-left: 10px ;	
+	background-color: rgb(255,252,250) !important ;
+	overflow:hidden ;
+}
+
+#header {
+        position:relative ;
+	background-color: rgb(255,252,250) ;
+	height:75px ; 
+	width:100% ;
+	margin-top:3px ;
+	margin-left:20px ;
+	margin-bottom:50px ;
+	border-bottom:1px solid white ;
+	z-index:10 ;
+	box-shadow: 10px 15px 25px #eee ;
+}
+
+#title {
+	position:relative ;
+	left:380px ;
+	top:-5px ;
+	height:45px ;
+	width:650px ;
+	text-align:center ;	
+	font-family: Helvetica ;
+	font-size:55px ;
+	
+}
+
+#info_bar {
+	position:relative ;
+	white-space: nowrap ;
+	margin-top: 10px ;
+	padding:0px 0px 0px 0px ;
+	left:240px ;
+	width:500px ;
+	color:black ;
+	line-height:250% ;
+	font-family:Palatino ;
+	font-size:13px ;
+}
+
+#current {
+	position:relative ;
+	top: 60px ;
+	left: 250px ;
+	color:gray;
+	border-bottom: 1px solid #fff ;
+	line-height:100% ;
+	font-family:arial ;
+	font-size:15px ;
+	text-anchor:center ;
+}
+
+
+#side_bar {
+	position:relative ;
+	overflow:show ;
+	background-color:rgba(255,255,255,0) ;
+	float:left ;
+	padding-left:20px ;
+	height:675px ;
+	width:220px ;
+	font-family:helvetica ;
+}
+
+
+#side_bar div.btn-group {
+	box-shadow: 1px 1px 2px #888 ;
+	border-radius:3px 25}
+
+#side_bar input[type=range] {
+	margin-bottom:20px ;
+	
+}
+
+#side_bar button {
+	border-width:0px ;
+	color:rgb(120,120,120) ;
+}
+
+#side_bar ul {
+	overflow-y:auto ;
+	overflow-x:auto ;
+	height:162px;
+	width:500px ;
+}
+
+#side_bar .caret {
+	margin-left:4px; 
+	color:#ccc ;
+}
+
+#side_bar .opacity-slider {
+	position:relative ;	
+	height:40px ;
+	width:125px ;
+	padding:10px ;
+	padding-bottom:0px ;
+}
+
+
+#cyan-slider {
+	top:50px ;
+}#magenta-slider {
+	top:100px ;
+}#green-slider {
+	top:150px ;
+}#yellow-slider {
+	top:200px ; }	
+
+#main_button {
+	position:relative ;
+	top:-10px ;
+	left:-10px ;
+	border: 1px solid #fff ;
+	border-radius: 5px ;
+	box-shadow: 0px 0px 5px #fff !important ;
+}
+
+#main_button button {
+	color: #555 ;
+	font-size:15px !important ;
+	background-color:rgba(255, 255, 255, 1) ;
+	width:175px;
+}
+
+#main_button .caret {
+	color: #777
+}
+
+#main_button ul {
+	height:500px ;
+
+}
+
+.maskButton {
+	box-shadow: 1px 2px 5px #fff !important ;
+}
+
+.maskButton button {
+	color:#777 !important ; 
+	background-color:rgb(255,255, 255) ; 
+}
+
+#cyan {
+	top:50px ;
+}
+
+#magenta {
+	top:100px ;
+}
+
+#green {
+	top:150px ;
+}
+
+#yellow {
+	top:200px ;
+}
+
+#viewer_window {
+	position:relative ;
+	overflow:auto ;
+	height:600px ;
+	padding:0px ;
+}
+
+#viewer {
+	overflow:auto ;
+	width:1050px;
+	height:441px ;
+	margin-left:1% ;
+	padding:70px 40px 10px 0px;
+	z-index:-5;
+}
+
+#centerpiece_img {
+	position:absolute;
+	width:1050px ; 
+	height:440px ;
+	padding-left:0 ; 
+        margin: -20px 10px 30px 0px ;
+	box-shadow: 0px 0px 5px #ccc ;
+}
+
+.overlay {
+	position:absolute;
+	border:0px ;
+	width:1050px ; 
+	height:440px ;
+	padding-left:0 ; 
+        margin: -20px 10px 30px 0px ;
+	opacity:0.7 ;
+}
+
+#fixed_left_adjust {
+	position:relative ;
+	overflow:hidden ;
+	float:left ;
+	width:0px ;
+	height:100% ;	
+	padding:0 ;
+	margin:0 ;
+}
+
+#slider {
+	position:absolute ;
+	margin-left:175px ;
+	margin-top:41px ;
+	overflow:visible ;
+	padding:0px 10px 10px 10px ;
+  	z-index:9 ;	
+}
+
+#slider input {
+	border:1px solid black ; 
+	width:700px ; 
+}
+
+#extras {
+	position:absolute;  
+	height:10px ;
+	color: gray ;
+	font-family: arial ;
+	font-size:5px ;
+	left: 30px ;
+	padding: 10px 0px 0px 10px ;
+	list-style-type: circle;
+}
+
+#extras a {
+	color:#BBB ;
+}
+#extras a:hover {
+	color:#0099FF ;
+}
+
+#downloads {
+	top:0px; 
+	margin-left: 0px ;
+	padding-right:10px ;
+}
+
+

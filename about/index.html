@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta name="description" content="Z-Brain Atlas: Project, Information,
+	Navigation, About.">
+  <meta charset="utf-8"> 
+    <title>About Z-Brain</title>
+    <link rel="stylesheet" type="text/css" href="css/about.css"> 
+    <link rel="stylesheet" type="text/css" href="css/Navbar.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script type="text/javascript" src="libs/d3.min.js"></script>
+    <script type="text/javascript" src="libs/jquery-2.1.1.min.js"></script> 
+    <script type="text/javascript" src="js/gqeHelperFunctions.js"></script> 
+    <style>
+    </style>
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TQMQC8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQMQC8');</script>
+<!-- End Google Tag Manager -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63854656-1', 'auto');
+  ga('send', 'pageview');
+</script>  
+  <nav id="nav" class="navbar navbar-default navbar-static-top"> 
+	  <div class="navbar-header">
+	    <a class="navbar-brand" href ="index.html">Z-Brain</a>
+	  </div>
+	  <div>
+	    <ul class="nav navbar-nav">
+	      <li><a href="index.html">Home</a></li>
+	      <li class="active"><a href="about.html">About</a></li>
+	      <li><a href="contributing.html">Contributing to the Z-Brain</a></li>
+	      <li><a href="FAQ.html">FAQ</a></li>
+	      <li><a href="downloads.html">Downloads</a></li>
+	    </ul>
+	  </div>
+   </nav>
+   <div id="container">
+      <div id="header">
+        <span id="title">About Z-Brain</span>
+      </div>
+      <div id="content">
+	<h1>The Z-Brain</h1>
+	  <p>We built the Z-Brain in order to provide a standard reference
+		brain atlas for anatomical and functional studies of the larval
+		zebrafish brain []. The Z-Brain is a 3D reference atlas, that contains neuroanatomical labels and regional definitions within a standard coordinate space.</p>
+  	<p>	The Z-Brain was built as a neuroanatomical reference
+	atlas for the zebrafish neuroscience community. It was built
+	upon a 6dpf Nacre/mitfa mutant larvae stained with anti-ERK.
+	By registering fish stained with different anatomical markers
+	(antibody stains, transgenes, dye fills) to this common
+	reference brain, we have created a platform where many labels
+	can be explored in the same reference space. We currently have
+	29 labels registered to the atlas. For each label we register
+	multiple fish, and then represent that label as the mean
+	across fish, allowing for visualization of the average
+	positioning and staining of these neurons or features. Based
+	on these markers, we have also segmented to brain into 294
+	regions.</p>
+	<p>We hope that this resource will be valuable for exploring and
+	understanding the 6dpf zebrafish brain, and for automated and
+	standardized annotation of new anatomical and functional data.
+	This can be accomplished by registering new datasets into the
+	atlas, allowing for direct comparison to the accumulated
+	dataset. We encourage anyone interested in helping us expand
+	and improve the atlas, either by incorporating additional
+	labels, or by expanding or improving the regional
+	segmentation, to please contact Owen Randlett at
+	<a href="mailto:zebrafishbrain@gmail.com">zebrafishbrain@gmail.com</a>.</p>
+	<h1>Using the Z-Brain to explore anatomy</h1>
+	<p>To view the data, you can either use the <a href="index.html">web
+	interface</a>. This can get you oriented with the data, and
+	overlay masks of regions onto any of the anatomical labels. Below is
+	a diagram of the different buttons and functions.</p>
+	<p><img alt="diagram" src="About/DiagramInfoImage.jpg"
+	style="height:500px;width900px;"></p>
+	<p>To explore the Z-Brain in more detail, you can use the
+	Matlab-based viewer that we have built. You need to download the
+	files below, and run the viewer in Matlab. This will allow you to
+	perform multicolour overlays of labels and regions, ‘click to find’
+	regions, view in different slice orientations, write slices or
+	stacks to disk, and draw or update regional definitions.
+	Instructions for the various functions are displayed when the
+	program starts, and commented in the header of the ‘ZBrainViewer.m’
+	function.
+	</p>
+	<p><strong>The three files you will need are:</strong>
+	<br>
+	  <ol>
+	    <li><a href="https://github.com/owenrandlett/Z-Brain/archive/master.zip" download>ZBrainViewer</a></li>
+	     <dd>- Unzip this directory, which containls the Matlab script 'ZBrainViewer.m' that runs the viewer.</dd>
+	    <li><a href="Downloads/AnatomyLabelDatabase.hdf5" download>Anatomy Label Database</a></li>
+	     <dd> - This is an image file that contains the stacks of
+	   the labels (transgenes, antibody stains, etc). Each stack
+	    is a mean across multiple fish. It is an HDF5 file, and so
+	  can also be loaded into different viewing programs. The
+	    resolution of the data is x/y/z = 0.798/0.798/2um.
+	    <br><em><strong>Warning: file size is ~4.5gb.</strong></em></dd>
+	    <li><a href="Downloads/MaskDatabase.mat" download>Mask Database</a></li>
+	     <dd> - This is the file that contains the regional
+	    definitions. It is a compressed Matlab file. If you would
+	    like the regions in an image format, please contact me.</dd>
+	  </ol>
+	</p>
+	<p>
+	<strong>Download these three files and put them in your Matlab
+	path. Then run the ‘ZBrainViewer’ function.</strong>
+	</p>
+      </div>
+    </div>
+
+  </body>
+</html>

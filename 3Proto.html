@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+  <head>
+    <title>Danio R. Atlas</title>
+    <style>
+      <--!h1 {font-family:"Helvetica Neue"}-->
+      body {
+	background-color: #FFF ; 
+	padding: 0px ; 
+	margin: 0px ;
+	width: 100% ;	
+	height: 100% ;
+      } 
+      #container {
+	min-height:100% ;
+	position:relative ;
+	padding-bottom = 30px ;
+      }
+      #header {
+	background-color: #EFEFEF ;
+	text-align:left ;
+	padding: 10px ;
+	height: 80px ; width:100% ;
+	border-bottom-width: 1px ;
+	border-bottom-color: gray ;
+	border-bottom-style: solid ;
+	border-right-width: 4px ;
+	border-right-color: gray ;
+	border-right-style: solid ;
+      }
+      #header h1,p { font-family: "HelveticaNeue-Light" ; margin-left:
+	      180px ; }
+      #sidebar {
+	background-color: white ;
+	border: 2px solid gray ;
+	border-color: white gray gray white ;
+	border-radius: 0 0 0 0 ;
+	height: 500px ; width: 250px ;
+	margin-top: 20px;
+	overflow: scroll ;
+	padding-bottom: 10px ;
+      }
+      #sidebar label {font-size: 10px ; margin-left:5px;border-bottom:
+	      1px solid #EEEEEE}
+     
+      #topcasing {
+	position; fixed ;
+	bottom: 0px ;
+	margin-bottom:0px ;
+	border-top: 1px solid black ;
+	height: 10px ; width: 100% ;
+      }
+     #footer {
+     	height:30px ; width: 100% ;
+  	border: 1px solid black ;
+	border-left: 0px ;
+ 	position: absolute;
+	bottom: 0 ;
+	background-color: #EFEFEF ;
+     }
+    </style>
+  </head>
+  <body>
+  <div id="container">
+    <div id="header">
+        <img src="Z_Icon.jpg" alt="Zebrafish Icon"
+	 style="width:150px; height:75px; padding-top:3px;
+	 padding-right:13px; margin-left: 10px;" align="left"/>
+	<h1 style="font-size:20px" align="left">I n  M e m o r i a m  :  D a n i o 
+	R. A t l a s</h1>
+	<p style="color:purple">Interactive Zebrafish Atlas</p>
+	<p style="color:purple; font-size:13px;
+	padding-right:15px;padding-top:4px" align="right">Okks 2015</p>
+	<div align ="left" style="border:3px solid #999; margin:-10px;"></div>	
+    </div>
+    <div id="sidebar">
+    	<h4 align="left" style="font-family:sans-serif;margin-top:5px;margin-left:10px;">
+	  Datasets</h4>
+	<p style="margin-left:5px;margin-top:-25px">_________________</p>
+	<label><input type="radio" name="dataset" value="dataset"
+	class="radio">
+	  6.7FRhcrtR-Gal4-uasKaede_6dpf_MeanImageOf12Fish</input>
+	</label><br> 
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Anti-5HT_6dpf_MeanImageOf40Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Anti-Gad67_6dpf_MeanImageOf17Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Anti-GlyR_6dpf_MeanImageOf160Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Anti-tERK_6dpf_MeanImageOf193Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Anti-TH_6dpf_MeanImageOf10Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Anti-Zn1_6dpf_MeanImageOf10Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Anti-Zn12(Hnk-1)_6dpf_MeanImageOf9Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Anti-Znp1(Synaptotagmin2)_6dpf_MeanImageOf118Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Anti-Zrf1(GFAP)_6dpf_MeanImageOf5Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Anti-Zrf2_6dpf_MeanImageOf5Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Elavl3-GCaMP5G_6dpf_MeanImageOf7Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Elavl3-H2BRFP</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          EtVmat2-GFP_6dpf_MeanImageOf55Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Gad1b-GFP_6dpf_MeanImageOf10Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Glyt2-GFP_6dpf_MeanImageOf13Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Hcrt-RFP_6dpf_MeanImageOf15Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Isl1-GFP_6dpf_MeanImageOf17Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Isl2bGal4-uasDendra</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Olig2-GFP_6dpf_MeanImageOf12Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Otpb.A-Gal4-UAS-GCaMP_6-7dpf_MeanImageOf19Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Otpb.A-Nsfb-GFP_6dpf_MeanImageOf10Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Oxtl-GFP_6dpf_MeanImageOf68Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Pet1-GFP_6dpf_MeanImageOf13Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          Ptf1aGal4-uasKaede_6dpf_MeanImageOf11Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          S1181tGal4-uasKaede_6dpf_MeanImageOf14Fish</input>
+	</label><br>
+        <label><input type="radio" name="dataset" value="dataset" class="radio">
+          SpinalBackfills_6dpf_MeanImageOf23Fish</input>
+	</label><br>
+
+    <input type="range" name="img_slider" min="0"  max="100"
+             step="1"  id="img_slider" value="0" oninput="showVal(this.value)"
+	     style="position:absolute;top:650px;left:25px;width:150px"></input>
+    </div>
+    <div>    
+      <img id="centerpiece_img" src="Datasets/Anti-TH_6dpf_MeanImageOf10Fish.gif" 
+      	alt="placeholder" align="center"
+	style="position:absolute; left:270px; top:140px ;
+			width:1100px; height:480px ; border:2px gray solid ;"/>
+    </div>
+  </div>
+    <div id="footer"><p align="center"
+    style="font-size:10px;color:gray">2.Proto of Danio R. Atlas, all
+    files hosted locally</p></div>
+
+    <script>
+    	var val = document.getElementById("img_slider").value ;
+
+	function showVal(newVal) {
+		console.log(newVal) ;
+		document.getElementById("centerpiece_img").src =
+			"Images/Frh" + newVal + ".jpg"  ; }
+    </script>    
+  </body>

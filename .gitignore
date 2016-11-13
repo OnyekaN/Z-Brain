@@ -1,0 +1,16 @@
+*.png
+*.jpg
+*.DS_Store
+*.hdf5
+*.tiff
+*.gif
+*.tif
+HiResImages/
+downloads/
+Masks/
+Recolored\ Images/
+SDMasks/
+Images/
+Imagesbk/
+bkp/
+Test/

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta name="description" content="Z-Brain Atlas: An open source
+  Zebrafish brain atlas. The Z-Brain was built as a neuroanatomical
+  reference atlas for the zebrafish neuroscience community.  We hope
+  that this resource will be valuable for exploring and understanding
+  the 6dpf zebrafish brain, and for automated and standardized
+  annotation of new anatomical and functional data.">
+  <meta name="keywords" content="Z-Brain, zebrafish, danio rerio
+  atlas, 2-photon, pERK, tERK, labeling">
+  <meta charset="utf-8">  
+    <title>Z-Brain Atlas</title>
+    <link rel="stylesheet" type="text/css" href="css/Stylel2Proto.css">
+    <link rel="stylesheet" type="text/css" href="css/Sliders.css">
+    <link rel="stylesheet" type="text/css" href="css/Navbar.css">
+	  <link rel="stylesheet" type="text/css" href="css/Hoverbox.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script type="text/javascript" src="libs/d3.min.js"></script>	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script type="text/javascript" src="libs/d3.min.js"></script>
+    <script type="text/javascript" src="libs/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="libs/bootstrap.min.js"></script>
+	  <script type="text/javascript" src="libs/bootbox.min.js"></script>
+    <script type="text/javascript" src="js/helperFunctions.js"></script> 	
+    <style>
+    </style>
+  </head>
+  <body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TQMQC8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TQMQC8');</script>
+<!-- End Google Tag Manager -->
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-63854656-1', 'auto'); ga('send', 'pageview');
+</script>
+  	<nav id="nav" class="navbar navbar-default navbar-static-top"> 
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="index.html">Z-Brain</a>
+	    </div>
+	  	<div>
+	    	<ul class="nav navbar-nav">
+	      	<li class="active"><a href="index.html">Home</a></li>
+	      	<li><a href="about.html">About</a></li>	
+     	    <li><a href="contributing.html">Contributing to the Z-Brain</a></li>
+	      	<li><a href="FAQ.html">FAQ</a></li>
+	      	<li><a href="downloads.html">Downloads</a></li>	
+	    	</ul>
+	  	</div>
+		</nav> 
+  <div id="container">
+ 		<div id="header">
+    	<div id="title">
+			 	<span>Z-Brain Atlas</span>
+			</div>	
+			<div id="info_bar">
+	  		<span id="current">Currently Viewing ....
+					<em>Otpb.A-Gal4-UAS-GCaMP_6-7dpf_MeanImageOf19Fish</em>
+				</span>
+			</div>
+		</div>
+    <div id="side_bar"> 
+
+    	<div class="btn-group" id="main_button">
+	  		<button type="button" data-toggle="dropdown" class="btn
+	  		btn-default dropdown-toggle">Select Dataset<span class="caret"></span>
+	  		</button> <ul class="dropdown-menu"></ul>
+			</div>
+      <div class="btn-group maskButton" id="cyan">
+	  		<button type="button" data-toggle="dropdown" class="btn
+	  		btn-default dropdown-toggle">Select Overlay<span class="caret"></span>
+	  		</button> <ul class="dropdown-menu"><li><a href="#!">None</a></li></ul>
+			</div>  
+ 			<div class="opacity-slider" id="cyan-slider"> 
+	  		<input type="range" class="cyan" id="cyan-range" step="1" 
+	  	 	value="50" min="0" max="99" class="opacity">
+			</div>
+      <div class="btn-group maskButton" id="magenta">
+	  		<button type="button" data-toggle="dropdown" class="btn
+				btn-default dropdown-toggle">Select Overlay<span class="caret"></span>
+	  		</button> <ul class="dropdown-menu"><li><a href="#!">None</a></li></ul>
+			</div> 
+			<div class="opacity-slider" id="magenta-slider"> 
+	  		<input type="range" class="magenta" id="magenta-range" step="1"
+	 	 		value="50" min="0" max="99" class="opacity">
+			</div>
+      <div class="btn-group maskButton" id="green">
+	  		<button type="button" data-toggle="dropdown" class="btn
+	  		btn-default dropdown-toggle">Select Overlay<span class="caret"></span>
+	  		</button> <ul class="dropdown-menu"><li><a href="#!">None</a></li></ul>
+			</div>
+ 			<div class="opacity-slider" id="green-slider"> 
+	  		<input type="range" class="green" id="green-range" step="1" 
+	  		value="50" min="0" max="99" class="opacity">
+			</div>
+      <div class="btn-group maskButton" id="yellow">
+	  		<button type="button" data-toggle="dropdown" class="btn
+	  		btn-default dropdown-toggle">Select Overlay<span class="caret"></span>
+	  		</button> <ul class="dropdown-menu"><li><a href="#!">None</a></li></ul>
+			</div>
+ 			<div class="opacity-slider" id="yellow-slider"> 
+	  		<input type="range" class="yellow" id="yellow-range" step="1"
+	 	 		value="50" min="0" max="99" class="opacity">
+			</div>
+    </div>
+    <div id="viewer_window">
+
+    	<div id="fixed_left_adjust"></div>
+			<div id="slider">
+	  		<input type="range" id="range" name="img_slice" step="1"
+				value="90" min="0" max="137" class="stack-slider">
+			</div>
+      <div id="viewer">   
+	  		<img id="centerpiece_img" alt="." align="center"/
+	  		src="Images/Otpb.A-Gal4-UAS-GCaMP_6-7dpf_MeanImageOf19Fish-90.jpg"
+				name="Otpb.A-Gal4-UAS-GCaMP_6-7dpf_MeanImageOf19Fish">
+        <img id="cyan_overlay" name="cyan" class="overlay" alt="."
+	  		align="center" src="Masks/blank.png"/> 
+	  		<img id="magenta_overlay" name="magenta" class="overlay" alt="."
+	  		align="center" src="Masks/blank.png"/> 
+	  		<img id="green_overlay" name="green" class="overlay" alt="."
+	  		align="center" src="Masks/blank.png"/>  
+	  		<img id="yellow_overlay" name="yellow" class="overlay" alt="."
+	  		align="center" src="Masks/blank.png"/>
+			</div>
+      </div>
+			<div id="hoverbox">
+			  <div id="hr_sidebar">
+					<div class="btn-group">
+	  				<button type="button" data-toggle="dropdown" class="btn
+	  				btn-default dropdown-toggle"><span class="caret"></span>
+	  				</button> <ul class="dropdown-menu"><li><a href="#!">None</a></li></ul>
+					</div><br>			
+					<div class="btn-group">
+	  				<button type="button" data-toggle="dropdown" class="btn
+	  				btn-default dropdown-toggle"><span class="caret"></span>
+	  				</button> <ul class="dropdown-menu"><li><a href="#!">None</a></li></ul>
+					</div><br>
+					<div class="btn-group">
+	  				<button type="button" data-toggle="dropdown" class="btn
+	  				btn-default dropdown-toggle"><span class="caret"></span>
+	  				</button> <ul class="dropdown-menu"><li><a href="#!">None</a></li></ul>
+					</div><br>
+					<div class="btn-group">
+	  				<button type="button" data-toggle="dropdown" class="btn
+	  				btn-default dropdown-toggle"><span class="caret"></span>
+	  				</button> <ul class="dropdown-menu"><li><a href="#!">None</a></li></ul>
+					</div><br>
+				</div>
+				<div id="hr_console">
+				</div>
+				<!--div id="hr_viewer">
+					<img id="hr_gif" src="HiResImages/6.7FRhcrtR-Gal4-uasKaede_6dpf_MeanImageOf12Fish.gif" alt="hr_gif">
+				</div-->
+    	</div>
+		</div>		    
+
+		<script type="text/javascript" src="js/pagerun.js" async></script>
+
+
+  </body>
+</html>
